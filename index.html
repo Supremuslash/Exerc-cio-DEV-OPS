@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Exercicio DevOps."
+    />
+    <meta name="theme-color" content="#050b07" />
+    <title>Bat</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <h1 id="page-title">BaT</h1>
+        </section>
+
+        <section class="stage-card" aria-label="Prévia da animação">
+          <div class="flight-stage">
+            <div class="moon" aria-hidden="true"></div>
+            <div class="star star-one" aria-hidden="true">+</div>
+            <div class="star star-two" aria-hidden="true">.</div>
+            <div class="star star-three" aria-hidden="true">*</div>
+            <iframe
+              id="animation-frame"
+              src="./bat-pixel-animation.html"
+              title="Animação de três morcegos em pixel art"
+            ></iframe>
+          </div>
+          <div class="controls">
+            <button class="play-button" id="toggle-animation" type="button" aria-pressed="false">
+              <span class="play-icon" aria-hidden="true">||</span>
+              <span id="toggle-label">Pausar voo</span>
+            </button>
+            <div class="speed-control">
+              <label for="speed">Velocidade <output id="speed-value" for="speed">1x</output></label>
+              <input id="speed" type="range" min="0.5" max="2" step="0.25" value="1" />
+              <div class="range-labels"><span>calmo</span><span>rápido</span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>© 2026 Victor. Todos os direitos reservados.</span>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
