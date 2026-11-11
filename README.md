@@ -32,6 +32,5 @@ testes e build. Em pushes bem-sucedidos para `main`, publica automaticamente o
 conteúdo de `dist/` no GitHub Pages.
 
 O deploy usa o `GITHUB_TOKEN` gerado pelo GitHub Actions com as permissões
-definidas no workflow; não é necessário cadastrar secrets adicionais.
+definidas no workflow.
 
-Consulte o [histórico das execuções no GitHub Actions](https://github.com/Supremuslash/Exerc-cio-DEV-OPS/actions/workflows/main.yml).
