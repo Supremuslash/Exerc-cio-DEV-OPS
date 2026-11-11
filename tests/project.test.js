@@ -8,6 +8,7 @@ const animationHtml = await readFile(
   "utf8",
 );
 const mainJs = await readFile(new URL("../src/main.js", import.meta.url), "utf8");
+const stylesheet = await readFile(new URL("../src/style.css", import.meta.url), "utf8");
 
 test("the page exposes every control hook used by the app", () => {
   for (const id of [
@@ -24,6 +25,14 @@ test("the page exposes every control hook used by the app", () => {
 test("the animation iframe uses a deploy-safe relative URL", () => {
   assert.match(indexHtml, /src="\.\/bat-pixel-animation\.html"/);
   assert.match(mainJs, /addEventListener\("load", updateAnimation\)/);
+});
+
+test("the scene keeps its gradient and stars without extra scenery", () => {
+  assert.doesNotMatch(indexHtml, /class="moon"/i);
+  assert.match(indexHtml, /class="star star-/);
+  assert.match(stylesheet, /\.flight-stage\s*\{[^}]*linear-gradient/s);
+  assert.match(stylesheet, /\.star\s*\{/);
+  assert.doesNotMatch(stylesheet, /\.moon|\.flight-stage::(?:before|after)/);
 });
 
 test("the pixel animation contains three controllable bat tracks", () => {

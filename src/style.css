@@ -94,48 +94,6 @@ h1::before {
     linear-gradient(180deg, #01011e 0%, #400973 55%, #2c11dc 100%);
 }
 
-.flight-stage::before,
-.flight-stage::after {
-  position: absolute;
-  right: -5%;
-  bottom: -91px;
-  left: -5%;
-  height: 160px;
-  border-radius: 50% 50% 0 0;
-  background: #07120a;
-  content: "";
-}
-
-.flight-stage::after {
-  right: -10%;
-  bottom: -119px;
-  left: 36%;
-  height: 150px;
-  background: #080b17;
-}
-
-.moon {
-  position: absolute;
-  top: 46px;
-  right: 15%;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #5d2ede;
-  box-shadow: 0 0 35px #053dcc55;
-}
-
-.moon::after {
-  position: absolute;
-  top: -8px;
-  left: 15px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #060817;
-  content: "";
-}
-
 .star {
   position: absolute;
   color: #c8ffd0;
@@ -249,19 +207,6 @@ h1::before {
 
   .flight-stage {
     height: 270px;
-  }
-
-  .moon {
-    top: 35px;
-    right: 12%;
-    width: 44px;
-    height: 44px;
-  }
-
-  .moon::after {
-    left: 12px;
-    width: 44px;
-    height: 44px;
   }
 
   .controls {
